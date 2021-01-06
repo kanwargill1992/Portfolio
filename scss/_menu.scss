@@ -109,6 +109,10 @@
     &.show {
       transform: translate3d(0, 0, 0);
     }
+
+    &.current > a {
+      color: $text-secondry;
+    }
   }
 
   .nav-link {
@@ -121,6 +125,10 @@
     color: #fff;
     text-decoration: none;
     @include easeOut;
+
+    &:hover {
+      color: $text-secondry;
+    }
   }
 }
 
