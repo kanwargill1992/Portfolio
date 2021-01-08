@@ -108,7 +108,16 @@
       transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
-    transform: translate3d(-100%, 0, 0); } }
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/Pic_Kanwar.jpg");
+      width: 150px;
+      height: 150px;
+      background-size: cover; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
