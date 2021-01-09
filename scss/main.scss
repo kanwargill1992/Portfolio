@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -52,8 +51,9 @@ header {
 
 main {
   padding: 4rem;
-  // height: 100%;
-  min-height: calc(100vh-60px);
+  // min-height: calc(100vh-60px);
+  min-height: calc(100vh - 60px);
+
   .icons {
     margin-top: 1rem;
 
@@ -106,9 +106,57 @@ main {
   border-bottom: $text-secondry 5px solid;
 }
 
+// Work/Projects
+.projects {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 270px;
+    height: 170px;
+
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $text-secondry;
+      @include easeOut;
+    }
+  }
+}
+
+//Button Styles
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $text-secondry;
+    color: set-text-color($text-secondry);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 10);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 10);
+  color: #fff;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: darken($color: $primary-color, $amount: 6);
   color: set-text-color($primary-color);
 }
+
+@import "mobile";
